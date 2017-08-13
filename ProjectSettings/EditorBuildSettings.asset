@@ -9,5 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: bd66fc7425434ef4d85e4e7fef0653c9
   - enabled: 1
-    path: Assets/Scenes/GameScene.unity
+    path: Assets/Scenes/FrontOfHouseScene.unity
     guid: e2281ea2f4897c243b6d2878f3c2f5b5
+  - enabled: 1
+    path: Assets/Scenes/BackOfHouse.unity
+    guid: 00000000000000000000000000000000
