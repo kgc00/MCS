@@ -6,7 +6,13 @@ using UnityEngine.UI;
 public class KitchenManagerScript : MonoBehaviour {
 	
 	LoadBackgroundImageScript loadImageScript;
-	public Canvas kitchenCanvs;
+	public Canvas kitchenCanvas;
+	public Canvas cookingCanvas;
+	public Canvas combiningCanvas;
+	public Canvas mixingCanvas;
+	public Canvas doughCanvas;
+	public Canvas meatMixingCanvas;
+	public Canvas meatPouringCanvas;
 
 	public void Start()
 	{
@@ -15,15 +21,32 @@ public class KitchenManagerScript : MonoBehaviour {
 
 	public void OnNewCookingSession()
 	{		
-		loadImageScript.LoadImage ();
-		if (kitchenCanvs.isActiveAndEnabled) {
-			kitchenCanvs.gameObject.SetActive (false);
-		}
+		//loadImageScript.LoadImage ();
+		if (kitchenCanvas.isActiveAndEnabled) {
+			kitchenCanvas.gameObject.SetActive (false);
+		} if (cookingCanvas.isActiveAndEnabled == false){
+			cookingCanvas.gameObject.SetActive(true);
+		} 
+		MeatPieRecipe ();
 	}
 
-	public void SetUpKitche()
+	public void MeatPieRecipe()
 	{
-		
-		//BackOfHouseButton.gameObject.SetActive (true);
+		if (combiningCanvas.isActiveAndEnabled == false){
+			combiningCanvas.gameObject.SetActive(true);
+		}	
+	}
+
+	public void MeatPieCanvasOneButtons(int image)
+	{
+		if (image == 0) {
+			Debug.Log ("Water");
+		} else if (image == 1) {
+			Debug.Log ("Flour");
+		} else if (image == 2) {
+			Debug.Log ("Butter");
+		} else {
+			Debug.Log ("Eggs");
+		}
 	}
 }
